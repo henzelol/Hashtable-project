@@ -11,8 +11,8 @@ public class Aluno {
     private String nome;
     
     public Aluno(){
-        String matricula = null;
-        String nome = null;
+        String[] matricula = null;
+        String[] nome = null;
           
     }
 
@@ -32,6 +32,9 @@ public class Aluno {
     public String getNome() {
         return nome;
     }
+
+
+    
 
     public void setNome(String nome) {
         this.nome = nome;
