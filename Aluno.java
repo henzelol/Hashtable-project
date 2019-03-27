@@ -5,15 +5,15 @@
  */
 package hashaplication;
 
-public class Aluno {
+public class Aluno  implements Hashable {
 
     private String matricula;
     private String nome;
-    
-    public Aluno(){
+
+    public Aluno() {
         String[] matricula = null;
         String[] nome = null;
-          
+
     }
 
     public Aluno(String matricula, String nome) {
@@ -33,9 +33,6 @@ public class Aluno {
         return nome;
     }
 
-
-    
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -48,6 +45,12 @@ public class Aluno {
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj); //To change body of generated methods, choose Tools | Templates.
+    }
+    @Override
+    public int hash(int tablesize){
+        int hashvalue = 0;
+        hashvalue = matricula.hashCode()%tablesize;
+        return hashvalue;
     }
 
 }
